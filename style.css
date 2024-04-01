@@ -49,13 +49,15 @@ body {
   grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
 .play-board .food {
-  background: #FF003D;
+  background: #00ff1e;
 }
 .play-board .head {
   background: #60CBFF;
   border-radius: 5px;
 }
-
+.score, .high-score{
+    color: yellow;
+}
 .controls {
   display: none;
   justify-content: space-between;
@@ -69,7 +71,19 @@ body {
   cursor: pointer;
   border-right: 1px solid #171B26;
 }
-
+.message{
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #37ff00;
+    text-emphasis: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.message::before{
+    content: "NOTE: ";
+    color: rgb(234, 255, 0);
+}
 @media screen and (max-width: 800px) {
     body{
         background-color: hsl(180, 6%, 65%);
@@ -94,5 +108,9 @@ body {
   .heading{
     margin-bottom: 0px;
     
+}
+.message{
+    display: none;
+
 }
 }

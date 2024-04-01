@@ -30,6 +30,10 @@ const handleGameOver = () => {
 }
 
 const changeDirection = e => {
+    // Hide the message when a key is pressed
+    const messageElement = document.querySelector(".message");
+    messageElement.style.display = "none";
+
     // Changing velocity value based on key press
     if(e.key === "ArrowUp" && velocityY != 1) {
         velocityX = 0;
@@ -92,3 +96,4 @@ const initGame = () => {
 updateFoodPosition();
 setIntervalId = setInterval(initGame, 100);
 document.addEventListener("keyup", changeDirection);
+    
