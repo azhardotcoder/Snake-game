@@ -22,12 +22,13 @@ body {
     
 }
 .wrapper {
-  width: 65vmin;
-  height: 70vmin;
+  width: 95vmin;
+  height: 80vmin;
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+    margin-bottom: 70px;
   border-radius: 5px;
   background: #293447;
   box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
@@ -52,6 +53,7 @@ body {
 }
 .play-board .head {
   background: #60CBFF;
+  border-radius: 5px;
 }
 
 .controls {
@@ -69,9 +71,14 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+    body{
+        background-color: hsl(180, 6%, 65%);
+    }
   .wrapper {
     width: 90vmin;
-    height: 115vmin;
+    height: 155vmin;
+    justify-content: flex-start;
+    margin-bottom: 90px;
   }
   .game-details {
     font-size: 1rem;
@@ -84,4 +91,8 @@ body {
     padding: 15px 0;
     font-size: 1rem;
   }
+  .heading{
+    margin-bottom: 0px;
+    
+}
 }
